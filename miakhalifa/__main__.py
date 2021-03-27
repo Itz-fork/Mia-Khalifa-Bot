@@ -280,7 +280,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]])
 
-    elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
+    elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE)
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
